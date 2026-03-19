@@ -10,7 +10,7 @@ const Footer = () => {
                     {/* Brand Column */}
                     <div className="space-y-6">
                         <Link to="/">
-                            <img src="/logo.png" alt="Meimathi" className="h-12 w-auto" />
+                            <img src="/logo1.png" alt="Meimathi" className="h-12 w-auto" />
                         </Link>
                         <p className="text-gray-400 text-sm leading-relaxed">
                             We create real estate websites that not only look good but perform better. Your digital property presence, elevated.
