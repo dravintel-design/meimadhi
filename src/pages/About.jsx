@@ -14,7 +14,7 @@ const About = () => {
                     <div>
                         <h3 className="text-3xl font-display font-bold text-white mb-6">WE ARE MEIMADHI</h3>
                         <p className="text-gray-400 mb-6 leading-relaxed">
-                            Founded in 2020, Meimadhi was built on a simple premise: real estate businesses deserve better websites. We combine aesthetics with performance to deliver digital experiences that not only look stunning but also drive real growth for property developers and agents.
+                            Founded in 2020, Meimathi was built on a simple premise: real estate businesses deserve better websites. We combine aesthetics with performance to deliver digital experiences that not only look stunning but also drive real growth for property developers and agents.
                         </p>
                         <div className="grid grid-cols-2 gap-8 mt-8">
                             <div>

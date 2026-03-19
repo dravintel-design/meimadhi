@@ -10,7 +10,7 @@ const Footer = () => {
                     {/* Brand Column */}
                     <div className="space-y-6">
                         <Link to="/">
-                            <img src="/logo.png" alt="Meimadhi" className="h-12 w-auto" />
+                            <img src="/logo.png" alt="Meimathi" className="h-12 w-auto" />
                         </Link>
                         <p className="text-gray-400 text-sm leading-relaxed">
                             We create real estate websites that not only look good but perform better. Your digital property presence, elevated.
@@ -58,7 +58,7 @@ const Footer = () => {
                 </div>
 
                 <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center">
-                    <p className="text-gray-500 text-sm">© 2026 Meimadhi Limited. All rights reserved.</p>
+                    <p className="text-gray-500 text-sm">© 2026 Meimathi Limited. All rights reserved.</p>
                     <div className="flex space-x-6 mt-4 md:mt-0">
                         <Link to="/privacy" className="text-gray-500 hover:text-white text-sm">Privacy Policy</Link>
                         <Link to="/terms" className="text-gray-500 hover:text-white text-sm">Terms of Service</Link>

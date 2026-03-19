@@ -5,12 +5,12 @@ const testimonials = [
     {
         name: "John Doe",
         role: "CEO, TechFlow",
-        content: "Meimadhi completely transformed our online presence. The new site is faster, looks better, and most importantly, converts more visitors.",
+        content: "Meimathi completely transformed our online presence. The new site is faster, looks better, and most importantly, converts more visitors.",
     },
     {
         name: "Jane Smith",
         role: "Marketing Director, Enviren",
-        content: "Detailed, professional, and incredibly talented. The team at Meimadhi understood exactly what we needed and delivered beyond expectations.",
+        content: "Detailed, professional, and incredibly talented. The team at Meimathi understood exactly what we needed and delivered beyond expectations.",
     }
 ];
 
