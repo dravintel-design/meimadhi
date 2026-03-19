@@ -28,7 +28,7 @@ const About = () => {
                         </div>
                     </div>
                     <div className="bg-hero-dark p-8 rounded-sm">
-                        <img src="https://placehold.co/600x400/121212/EDEDED?text=Team+Image" alt="Team" className="w-full h-auto rounded-sm opacity-80 hover:opacity-100 transition-opacity" />
+                        <img src="/team.jpg" alt="Meimathi Team" className="w-full h-auto rounded-sm opacity-80 hover:opacity-100 transition-opacity" />
                     </div>
                 </div>
             </section>
