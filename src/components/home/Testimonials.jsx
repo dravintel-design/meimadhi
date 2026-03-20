@@ -3,12 +3,12 @@ import { Star } from 'lucide-react';
 
 const testimonials = [
     {
-        name: "John Doe",
+        name: "K Pandurangan",
         role: "CEO, TechFlow",
         content: "Meimathi completely transformed our online presence. The new site is faster, looks better, and most importantly, converts more visitors.",
     },
     {
-        name: "Jane Smith",
+        name: "Anand Christopher",
         role: "Marketing Director, Enviren",
         content: "Detailed, professional, and incredibly talented. The team at Meimathi understood exactly what we needed and delivered beyond expectations.",
     }
