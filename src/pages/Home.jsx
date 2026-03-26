@@ -20,14 +20,14 @@ const Home = () => {
 
                 <div className="text-center relative z-10 max-w-7xl mx-auto mt-[-5vh]">
                     {/* Main Headline */}
-                    <h1 className="flex flex-col items-center justify-center font-display font-bold tracking-tighter leading-[0.9]">
-                        <div className="flex items-center gap-2 md:gap-4">
-                            <span className="text-3xl md:text-6xl lg:text-[5rem] text-white">YOUR DIGITAL PRESENCE, </span>
-                            <span className="text-3xl md:text-6xl lg:text-[5rem] text-hero-neon">HANDLED.</span>
+                    <h1 className="flex flex-col items-center justify-center font-display font-bold tracking-tighter leading-[0.9] text-center">
+                        <div className="flex flex-col md:flex-row items-center gap-1 md:gap-4">
+                            <span className="text-4xl sm:text-5xl md:text-6xl lg:text-[5rem] text-white">YOUR DIGITAL PRESENCE, </span>
+                            <span className="text-4xl sm:text-5xl md:text-6xl lg:text-[5rem] text-hero-neon">HANDLED.</span>
                         </div>
-                        <div className="flex items-center gap-2 md:gap-4 mt-4">
-                            <span className="text-3xl md:text-6xl lg:text-[5rem] text-white">YOUR SALES, </span>
-                            <span className="text-3xl md:text-6xl lg:text-[5rem] text-hero-neon">ELEVATED.</span>
+                        <div className="flex flex-col md:flex-row items-center gap-1 md:gap-4 mt-8 md:mt-4">
+                            <span className="text-4xl sm:text-5xl md:text-6xl lg:text-[5rem] text-white">YOUR SALES, </span>
+                            <span className="text-4xl sm:text-5xl md:text-6xl lg:text-[5rem] text-hero-neon">ELEVATED.</span>
                         </div>
                     </h1>
 
