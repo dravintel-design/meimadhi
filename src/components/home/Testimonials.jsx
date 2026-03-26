@@ -5,7 +5,7 @@ const testimonials = [
     {
         name: "K Pandurangan",
         role: "CEO, TechFlow",
-        content: "Meimathi completely transformed our online presence. The new site is faster, looks better, and most importantly, converts more visitors.",
+        content: "Meimathi's digital marketing and lead generation services were a game changer. Their targeted campaigns and brand presence strategies directly helped us sell out our plots in record time!",
     },
     {
         name: "Anand Christopher",

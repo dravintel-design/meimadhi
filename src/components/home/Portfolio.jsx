@@ -4,22 +4,22 @@ const projects = [
     {
         title: "Mahalakshmi Nagar",
         category: "Perambalur, Trichy",
-        image: "https://placehold.co/800x600/1a1a1a/FFF?text=Mahalakshmi+Nagar",
+        image: "/mahalakshmi nagar.jpg",
     },
     {
         title: "SMV Residential Plot",
         category: "Preangiyur, Villupuram",
-        image: "https://placehold.co/800x600/1a1a1a/FFF?text=SMV+Residential+Plot",
+        image: "/SMV Nagar.png",
     },
     {
-        title: "Industrial Land",
+        title: "JK Industrial Land",
         category: "Navamalkapper, Villupuram",
-        image: "https://placehold.co/800x600/1a1a1a/FFF?text=Industrial+Land",
+        image: "/JK Industrial Land.jpeg",
     },
     {
-        title: "Global City",
-        category: "Puthirankottai, Chengalpattu",
-        image: "https://placehold.co/800x600/1a1a1a/FFF?text=Global+City",
+        title: "Golden City",
+        category: "Kariyamanikkam, Trichy",
+        image: "/Golden City.png",
     }
 ];
 
@@ -44,7 +44,7 @@ const Portfolio = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     {projects.map((project, index) => (
                         <div key={index} className="group relative overflow-hidden cursor-pointer">
-                            <div className="aspect-w-16 aspect-h-12 overflow-hidden bg-gray-800">
+                            <div className="aspect-[4/3] w-full overflow-hidden bg-gray-800">
                                 <img
                                     src={project.image}
                                     alt={project.title}

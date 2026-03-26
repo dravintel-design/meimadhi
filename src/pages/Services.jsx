@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
 import ServicesList from '../components/home/Services'; // Reusing for now
-import { Check } from 'lucide-react';
+import { Check, ChevronDown } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
-import knightIllustration from '../assets/knight-illustration.png';
-
 const faqs = [
     {
         question: "What is real estate digital marketing?",
@@ -64,12 +62,12 @@ const Services = () => {
     return (
         <div className="bg-hero-black min-h-screen">
             {/* Custom Services Hero */}
-            <section className="min-h-screen bg-[#213232] pt-24 pb-12 overflow-hidden flex items-center">
+            <section className="min-h-screen relative bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-[#344e4e] via-[#213232] to-[#182424] pt-24 pb-12 overflow-hidden flex items-center">
                 <div className="max-w-[1600px] w-full mx-auto px-4 sm:px-6 lg:px-8 relative">
                     <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
 
-                        {/* Left Content - Massive Typography */}
-                        <div className="flex-1 w-full lg:w-3/5 z-10 pt-12 lg:pt-0">
+                        {/* Main Content - Massive Typography */}
+                        <div className="flex-1 w-full z-10 pt-12 lg:pt-0">
                             <h1 className="font-display font-bold leading-[0.85] tracking-tighter uppercase flex flex-col">
                                 <motion.span
                                     className="text-white text-6xl sm:text-7xl md:text-8xl lg:text-[7.5rem] xl:text-[9rem]"
@@ -77,7 +75,7 @@ const Services = () => {
                                     animate={{ opacity: 1, y: 0 }}
                                     transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
                                 >
-                                    OUR SKILLS, THY
+                                    OUR SKILL, THY
                                 </motion.span>
                                 <motion.span
                                     className="text-white text-6xl sm:text-7xl md:text-8xl lg:text-[7.5rem] xl:text-[9rem] mt-2 md:mt-4"
@@ -98,22 +96,29 @@ const Services = () => {
                             </h1>
                         </div>
 
-                        {/* Right Content - Illustration */}
-                        <div className="flex-1 w-full lg:w-2/5 flex justify-center lg:justify-end relative">
-                            {/* The illustration */}
-                            <img
-                                src={knightIllustration}
-                                alt="Knight Illustration"
-                                className="w-full max-w-md lg:max-w-xl h-auto object-contain object-bottom scale-110 lg:scale-125 transform translate-y-8 origin-bottom relative z-10"
-                            />
-                        </div>
-
                     </div>
                 </div>
+
+                {/* Scroll Down Arrow */}
+                <motion.div 
+                    className="absolute bottom-10 left-1/2 -translate-x-1/2 cursor-pointer z-50 flex flex-col items-center"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1, y: [0, 10, 0] }}
+                    transition={{ 
+                        opacity: { delay: 1, duration: 1 }, 
+                        y: { repeat: Infinity, duration: 1.5, ease: "easeInOut" } 
+                    }}
+                    onClick={() => {
+                        document.getElementById('social-media-management')?.scrollIntoView({ behavior: 'smooth' });
+                    }}
+                >
+                    <span className="text-white/40 text-xs tracking-widest font-sans font-medium uppercase mb-2">Scroll</span>
+                    <ChevronDown className="text-hero-neon w-6 h-6" />
+                </motion.div>
             </section>
 
             {/* Service 01 - Web Design */}
-            <section className="py-24 bg-[#213232] border-t border-white/5">
+            <section id="social-media-management" className="py-24 bg-[#213232] border-t border-white/5">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
@@ -133,12 +138,12 @@ const Services = () => {
 
                         {/* Image Column */}
                         <div className="relative">
-                            <div className="aspect-[4/5] w-full rounded-2xl overflow-hidden bg-gray-800 shadow-2xl border border-white/10">
-                                {/* Placeholder for the phone image, since it was provided as part of the composition screenshot */}
+                            <div className="aspect-square w-full max-w-md mx-auto rounded-3xl overflow-hidden shadow-[0_0_40px_rgba(0,0,0,0.3)] bg-[#213232] flex items-center justify-center p-8 border border-white/5">
+                                {/* Replaced the placeholder with the SMM image provided by the user */}
                                 <img
-                                    src="https://images.unsplash.com/photo-1616423640778-28d1b53229bd?auto=format&fit=crop&q=80&w=800"
-                                    alt="Web Design Portfolio"
-                                    className="w-full h-full object-cover object-center opacity-90"
+                                    src="/SMM.png"
+                                    alt="Social Media Management Portfolio"
+                                    className="w-full h-full object-cover rounded-xl opacity-90"
                                 />
                             </div>
                         </div>
@@ -157,7 +162,7 @@ const Services = () => {
                             <div className="aspect-square w-full max-w-md mx-auto rounded-3xl overflow-hidden shadow-[0_0_40px_rgba(0,0,0,0.3)] bg-[#213232] flex items-center justify-center p-8 border border-white/5">
                                 {/* Placeholder for the monitor image */}
                                 <img
-                                    src="https://images.unsplash.com/photo-1541462608143-67571c6738dd?auto=format&fit=crop&q=80&w=800"
+                                    src="/LEAD GENERATION & ENGAGEMENT.png"
                                     alt="Brand Identity Portfolio"
                                     className="w-full h-full object-cover rounded-xl opacity-90"
                                 />
@@ -210,7 +215,7 @@ const Services = () => {
                             <div className="aspect-square w-full max-w-md mx-auto rounded-3xl overflow-hidden bg-[#2D4545] shadow-2xl flex items-center justify-center p-8 border border-white/5">
                                 {/* Placeholder for the monitor image showing messaging/funnel */}
                                 <img
-                                    src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800"
+                                    src="/END-TO-END SALES SUPPORT.png"
                                     alt="Clear Messaging Portfolio"
                                     className="w-full h-full object-cover rounded-xl opacity-90"
                                 />
