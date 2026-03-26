@@ -13,7 +13,7 @@ const Footer = () => {
                             <img src="/logo1.png" alt="Meimathi" className="h-12 w-auto" />
                         </Link>
                         <p className="text-gray-400 text-sm leading-relaxed">
-                            We create real estate websites that not only look good but perform better. Your digital property presence, elevated.
+                            We get you online and your real estate business growing in no time, leaving you to do what you do best: Closing deals like a boss and looking professional AF while doing it.
                         </p>
                         <div className="flex space-x-4">
                             <a href="#" className="text-gray-400 hover:text-hero-neon transition-colors"><Facebook size={20} /></a>
@@ -38,10 +38,9 @@ const Footer = () => {
                     <div>
                         <h3 className="text-white font-bold uppercase tracking-wider mb-6">Services</h3>
                         <ul className="space-y-4">
-                            <li><Link to="/web-design" className="text-gray-400 hover:text-hero-neon transition-colors text-sm">Web Design</Link></li>
-                            <li><Link to="/branding" className="text-gray-400 hover:text-hero-neon transition-colors text-sm">Branding</Link></li>
-                            <li><Link to="/seo" className="text-gray-400 hover:text-hero-neon transition-colors text-sm">SEO Optimization</Link></li>
-                            <li><Link to="/maintenance" className="text-gray-400 hover:text-hero-neon transition-colors text-sm">Maintenance</Link></li>
+                            <li><Link to="/services" className="text-gray-400 hover:text-hero-neon transition-colors text-sm">Social Media Management</Link></li>
+                            <li><Link to="/services" className="text-gray-400 hover:text-hero-neon transition-colors text-sm">Lead Generation</Link></li>
+                            <li><Link to="/services" className="text-gray-400 hover:text-hero-neon transition-colors text-sm">Sales Support</Link></li>
                         </ul>
                     </div>
 
