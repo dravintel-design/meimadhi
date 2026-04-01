@@ -56,12 +56,16 @@ const Footer = () => {
                     </div>
                 </div>
 
-                <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
                     <p className="text-gray-500 text-sm">© 2026 Meimathi Limited. All rights reserved.</p>
-                    <div className="flex space-x-6 mt-4 md:mt-0">
+                    <div className="flex space-x-6">
                         <Link to="/privacy" className="text-gray-500 hover:text-white text-sm">Privacy Policy</Link>
-                        <Link to="/terms" className="text-gray-500 hover:text-white text-sm">Terms of Service</Link>
+                        <Link to="/terms" className="text-gray-500 hover:text-white text-sm">Terms of Use</Link>
                     </div>
+                    <p className="text-gray-500 text-sm">
+                        Designed and developed by{' '}
+                        <a href="https://www.dravintel.com/" target="_blank" rel="noopener noreferrer" className="hover:text-hero-neon transition-colors">Dravintel Design</a>.
+                    </p>
                 </div>
             </div>
         </footer>
