@@ -27,8 +27,8 @@ const categories = [
     },
     {
         id: 'old',
-        label: 'Past Projects',
-        description: 'Projects we have successfully marketed and closed.',
+        label: 'Completed Projects',
+        description: 'Projects we have successfully marketed and delivered for our clients.',
         projects: [
             {
                 title: 'Mahalakshmi Nagar',
