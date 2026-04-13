@@ -25,7 +25,7 @@ const testimonials = [
         id: '4-qtrKs2aPk',
         name: 'Client Three',
         role: 'Residential Builder',
-        quote: 'Professional, fast, and results-driven — highly recommend.',
+        quote: 'Professional, fast and results driven. Cannot recommend them enough.',
     },
 ];
 
@@ -274,24 +274,8 @@ const Testimonials = () => {
         }}>
             <div style={{ maxWidth: 1200, margin: '0 auto', padding: '0 24px' }}>
 
-                {/* ── Section header ── */}
+                {/* Section header */}
                 <div style={{ textAlign: 'center', marginBottom: 64 }}>
-                    <span style={{
-                        display: 'inline-flex',
-                        alignItems: 'center',
-                        gap: 8,
-                        fontSize: '11px',
-                        fontWeight: 700,
-                        letterSpacing: '0.22em',
-                        textTransform: 'uppercase',
-                        color: NEON,
-                        marginBottom: 16,
-                    }}>
-                        <span style={{ width: 28, height: 1, background: NEON, display: 'inline-block' }} />
-                        Video Testimonials
-                        <span style={{ width: 28, height: 1, background: NEON, display: 'inline-block' }} />
-                    </span>
-
                     <h2 style={{
                         fontFamily: 'Oswald, sans-serif',
                         fontSize: 'clamp(2rem, 4.5vw, 3.5rem)',
@@ -317,7 +301,7 @@ const Testimonials = () => {
                         margin: '0 auto',
                         lineHeight: 1.75,
                     }}>
-                        Hover over each video to bring it to life — straight from the clients who've seen real results.
+                        Hover over each video to see them come alive. These are real clients sharing their real experience.
                     </p>
                 </div>
 
