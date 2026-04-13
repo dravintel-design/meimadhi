@@ -23,7 +23,6 @@ const QuoteBanner = () => {
                 background: BLACK,
                 padding: '100px 24px',
                 textAlign: 'center',
-                borderTop: '1px solid rgba(110,231,183,0.08)',
                 borderBottom: '1px solid rgba(110,231,183,0.08)',
                 position: 'relative',
                 overflow: 'hidden',

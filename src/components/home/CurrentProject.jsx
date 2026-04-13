@@ -319,20 +319,7 @@ const CurrentProject = () => {
 
                 {/* Section header */}
                 <div style={{ marginBottom: 56 }}>
-                    <span style={{
-                        display: 'inline-flex',
-                        alignItems: 'center',
-                        gap: 8,
-                        fontSize: '11px',
-                        fontWeight: 700,
-                        letterSpacing: '0.22em',
-                        textTransform: 'uppercase',
-                        color: NEON,
-                        marginBottom: 14,
-                    }}>
-                        <span style={{ width: 24, height: 1, background: NEON, display: 'inline-block' }} />
-                        Current Projects
-                    </span>
+
                     <h2 style={{
                         fontFamily: 'Oswald, sans-serif',
                         fontSize: 'clamp(2rem, 4vw, 3.2rem)',
