@@ -109,7 +109,7 @@ const ProjectCard = ({ project }) => {
                         display: 'block',
                         transition: 'transform 0.6s ease, filter 0.5s ease',
                         transform: hovered ? 'scale(1.06)' : 'scale(1)',
-                        filter: hovered ? 'grayscale(0%) brightness(1)' : 'grayscale(20%) brightness(0.9)',
+                        filter: hovered ? 'grayscale(0%) brightness(1)' : 'grayscale(100%) brightness(0.85)',
                     }}
                 />
                 {/* Gradient overlay */}
