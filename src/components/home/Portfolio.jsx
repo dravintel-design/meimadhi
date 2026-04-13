@@ -39,7 +39,7 @@ const Portfolio = () => {
                     </div>
                     <Link
                         to="/our-work"
-                        className="hidden md:inline-flex items-center justify-center border border-white text-white px-8 py-3 font-display font-bold uppercase tracking-wide hover:bg-white hover:text-black transition-colors"
+                        className="hidden md:inline-flex items-center justify-center border border-hero-neon text-hero-neon px-8 py-3 font-display font-bold uppercase tracking-wide hover:bg-hero-neon hover:text-black transition-colors"
                     >
                         View All Projects
                     </Link>
@@ -66,7 +66,7 @@ const Portfolio = () => {
                 <div className="mt-12 md:hidden">
                     <Link
                         to="/our-work"
-                        className="inline-flex items-center justify-center border border-white text-white px-8 py-3 font-display font-bold uppercase tracking-wide hover:bg-white hover:text-black transition-colors"
+                        className="inline-flex items-center justify-center border border-hero-neon text-hero-neon px-8 py-3 font-display font-bold uppercase tracking-wide hover:bg-hero-neon hover:text-black transition-colors"
                     >
                         View All Projects
                     </Link>
