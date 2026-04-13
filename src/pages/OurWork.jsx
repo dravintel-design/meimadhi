@@ -21,8 +21,15 @@ const categories = [
         label: 'Completed Projects',
         description: 'Projects we have successfully marketed and delivered for our clients.',
         projects: [
-            { title: 'SMV Residential Plot',  location: 'Preangiyur, Villupuram',      image: '/SMV Nagar.png',               tag: 'Sold Out' },
-            { title: 'JK Industrial Land',    location: 'Navamalkapper, Villupuram',   image: '/JK Industrial Land.jpeg',    tag: 'Closed'   },
+            { title: 'Sri Thanvanthiri Swamy Nagar', location: 'Panruti',          image: null,                          tag: 'Sold Out' },
+            { title: 'Udhayam Farm Land',             location: 'Poothurai',        image: null,                          tag: 'Sold Out' },
+            { title: 'Om Ganapathy Nagar',            location: 'Sulur',            image: null,                          tag: 'Sold Out' },
+            { title: 'JK Industrial',                 location: 'Navamalkapper',    image: '/JK Industrial Land.jpeg',   tag: 'Closed'   },
+            { title: 'Tamilvel Nagar',                location: 'Siruvadi',         image: null,                          tag: 'Sold Out' },
+            { title: 'Selvavel Nagar',                location: 'Siruvadi',         image: null,                          tag: 'Sold Out' },
+            { title: 'JKR City',                      location: 'V Agaram',         image: null,                          tag: 'Sold Out' },
+            { title: 'Sundaramurthi Vinayagar Nagar', location: 'Perangiyur',       image: null,                          tag: 'Sold Out' },
+            { title: 'JL Industry',                   location: 'Navamalkapper',    image: null,                          tag: 'Closed'   },
         ],
     },
     {
@@ -235,14 +242,41 @@ const ProjectCard = ({ project }) => {
             borderRadius: 12,
             border: '1px solid rgba(255,255,255,0.06)',
             background: BLACK,
+            transition: 'border-color 0.3s ease, box-shadow 0.3s ease',
         }}>
-            <div className="aspect-[4/3] w-full overflow-hidden bg-gray-900">
-                <img
-                    src={project.image}
-                    alt={project.title}
-                    className="object-cover w-full h-full transform group-hover:scale-105 transition-all duration-500 grayscale group-hover:grayscale-0"
-                />
-            </div>
+            {project.image ? (
+                <div className="aspect-[4/3] w-full overflow-hidden bg-gray-900">
+                    <img
+                        src={project.image}
+                        alt={project.title}
+                        className="object-cover w-full h-full transform group-hover:scale-105 transition-all duration-500 grayscale group-hover:grayscale-0"
+                    />
+                </div>
+            ) : (
+                <div style={{
+                    aspectRatio: '4/3',
+                    width: '100%',
+                    background: 'linear-gradient(135deg, rgba(33,50,50,0.8) 0%, rgba(10,10,10,0.9) 100%)',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    position: 'relative',
+                    overflow: 'hidden',
+                }}>
+                    <span style={{
+                        fontFamily: 'Oswald, sans-serif',
+                        fontSize: 'clamp(1rem, 2vw, 1.3rem)',
+                        fontWeight: 700,
+                        color: 'rgba(110,231,183,0.15)',
+                        textTransform: 'uppercase',
+                        letterSpacing: '0.08em',
+                        textAlign: 'center',
+                        padding: '0 16px',
+                    }}>
+                        {project.title}
+                    </span>
+                </div>
+            )}
             <span style={{
                 position: 'absolute', top: 14, left: 14,
                 fontSize: '10px', fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase',
