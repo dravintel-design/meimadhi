@@ -61,7 +61,7 @@ const QuoteBanner = () => {
                         color: NEON,
                         textShadow: '0 0 40px rgba(110,231,183,0.35)',
                     }}>
-                        You just enjoy watching it go.
+                        You just enjoy watching the deals close.
                     </span>
                 </p>
             </div>
