@@ -4,7 +4,7 @@ import Portfolio from '../components/home/Portfolio';
 import Testimonials from '../components/home/Testimonials';
 import QuoteBanner from '../components/home/QuoteBanner';
 import { Link } from 'react-router-dom';
-import { MessageCircle } from 'lucide-react';
+
 import heroCity from '../assets/hero-city.png';
 
 const Home = () => {
@@ -57,12 +57,7 @@ const Home = () => {
                     </div>
                 </div>
 
-                {/* Floating Chat Button */}
-                <div className="fixed bottom-8 right-8 z-50">
-                    <button className="bg-hero-neon w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:bg-white transition-colors">
-                        <MessageCircle className="w-8 h-8 text-black" />
-                    </button>
-                </div>
+
             </section>
 
             <CurrentProject />
