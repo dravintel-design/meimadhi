@@ -11,8 +11,9 @@ const categories = [
         label: 'Current Projects',
         description: 'Properties we are actively marketing and selling right now.',
         projects: [
-            { title: 'Global City',  location: 'Putthirankottai, Chengalpattu', image: '/layout-map.png',           tag: 'Selling Fast'    },
-            { title: 'Golden City',  location: 'Kariyamanikkam, Trichy',        image: '/Golden City.png',          tag: 'Newly Launched'  },
+            { title: 'Global City',          location: 'Putthirankottai, Chengalpattu', image: '/layout-map.png',            tag: 'Selling Fast'   },
+            { title: 'Golden City',          location: 'Kariyamanikkam, Trichy',        image: '/Golden City.png',           tag: 'Newly Launched' },
+            { title: 'Mahalakshmi Nagar',    location: 'Perambalur, Trichy',            image: '/mahalakshmi nagar.jpg',      tag: 'Active'         },
         ],
     },
     {
@@ -20,7 +21,6 @@ const categories = [
         label: 'Completed Projects',
         description: 'Projects we have successfully marketed and delivered for our clients.',
         projects: [
-            { title: 'Mahalakshmi Nagar',    location: 'Perambalur, Trichy',          image: '/mahalakshmi nagar.jpg',      tag: 'Sold Out' },
             { title: 'SMV Residential Plot',  location: 'Preangiyur, Villupuram',      image: '/SMV Nagar.png',               tag: 'Sold Out' },
             { title: 'JK Industrial Land',    location: 'Navamalkapper, Villupuram',   image: '/JK Industrial Land.jpeg',    tag: 'Closed'   },
         ],
@@ -35,6 +35,7 @@ const categories = [
 
 /* ─── Tag colours ─────────────────────────────────────────────────────── */
 const tagStyle = (tag) => {
+    if (tag === 'Active')         return { bg: 'rgba(110,231,183,0.15)',  color: NEON };
     if (tag === 'Selling Fast')   return { bg: NEON,                       color: BLACK };
     if (tag === 'Newly Launched') return { bg: '#3b82f6',                  color: '#fff' };
     if (tag === 'Sold Out')       return { bg: 'rgba(255,255,255,0.08)',    color: 'rgba(255,255,255,0.45)' };
