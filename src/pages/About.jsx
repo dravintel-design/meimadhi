@@ -18,7 +18,7 @@ const About = () => {
                         </p>
                         <div className="grid grid-cols-2 gap-8 mt-8">
                             <div>
-                                <h4 className="text-4xl font-display font-bold text-white">5+</h4>
+                                <h4 className="text-4xl font-display font-bold text-white">9+</h4>
                                 <p className="text-sm text-hero-neon uppercase tracking-wider">Projects Launched</p>
                             </div>
                             <div>
