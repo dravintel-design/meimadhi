@@ -13,7 +13,7 @@ const projects = [
         name: 'Global City',
         location: 'Putthirankottai, Chengalpattu',
         description:
-            'Premium residential plots in the heart of Putthirankottai. Meticulously planned, surrounded by nature and built for families who want to plant roots in a community that feels like home.',
+            'Premium residential plots in the heart of Putthirankottai, Chengalpattu. A meticulously planned layout with strong investment potential. We handle the full marketing and sales cycle so these plots reach the right buyers at the right time.',
         image: layoutMap,
         available: 25,
         sold: 22,
@@ -26,7 +26,7 @@ const projects = [
         name: 'Golden City',
         location: 'Kariyamanikkam, Trichy',
         description:
-            'Thoughtfully designed plots in the fast-growing corridor of Kariyamanikkam. Golden City brings together connectivity, space and long-term value in one of Trichy\'s most promising neighbourhoods.',
+            'Strategically located plots in Kariyamanikkam, one of Trichy\'s fastest moving corridors. Our team manages the entire sales pipeline for Golden City, bringing serious buyers to the table and closing deals efficiently.',
         image: '/Golden City.png',
         available: 18,
         sold: 30,
@@ -363,9 +363,9 @@ const CurrentProject = () => {
                         lineHeight: 1.1,
                         textTransform: 'uppercase',
                     }}>
-                        WHERE WE ARE{' '}
+                        PROJECTS WE ARE{' '}
                         <span style={{ color: NEON, textShadow: '0 0 30px rgba(110,231,183,0.35)' }}>
-                            BUILDING
+                            SELLING NOW
                         </span>
                     </h2>
                     <p style={{
@@ -375,7 +375,7 @@ const CurrentProject = () => {
                         lineHeight: 1.75,
                         margin: 0,
                     }}>
-                        Two communities taking shape right now. Real plots, real ownership and a real future for your family.
+                        These are the projects we are actively marketing and selling. If you are looking to invest or find your next home, you are in the right place.
                     </p>
                 </div>
 
