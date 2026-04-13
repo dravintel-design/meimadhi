@@ -50,7 +50,7 @@ const Footer = () => {
                         <p className="text-gray-400 text-sm mb-6">
                             Let's build something amazing together.
                         </p>
-                        <Link to="/book-call" className="inline-flex items-center justify-center w-full bg-hero-neon text-black font-bold uppercase tracking-wide py-3 px-4 rounded-sm hover:bg-white transition-colors">
+                        <Link to="/book-call" className="inline-flex items-center justify-center w-full bg-hero-neon text-black font-bold uppercase tracking-wide py-3 px-4 rounded-sm hover:bg-white hover:text-black transition-colors duration-300">
                             Book a Call <ArrowRight className="ml-2 w-4 h-4" />
                         </Link>
                     </div>

@@ -48,7 +48,7 @@ const Navbar = () => {
                         <div className="flex items-center space-x-4">
 
 
-                            <Link to="/book-call" className="bg-hero-neon text-black hover:bg-white transition-colors px-6 py-2.5 rounded-sm font-sans font-bold text-sm">
+                            <Link to="/book-call" className="bg-hero-neon text-black hover:bg-white hover:text-black transition-colors duration-300 px-6 py-2.5 rounded-sm font-sans font-bold text-sm">
                                 Book a Call
                             </Link>
                         </div>
