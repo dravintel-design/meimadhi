@@ -1,83 +1,403 @@
-import React from 'react';
+import React, { useState } from 'react';
 import layoutMap from '../../assets/layout-map.png';
+
+const NEON   = '#6EE7B7';
+const BG     = '#213232';
+const BLACK  = '#0a0a0a';
+const BORDER = 'rgba(110,231,183,0.12)';
+
+const projects = [
+    {
+        id: 'global-city',
+        label: 'Ongoing Project',
+        name: 'Global City',
+        location: 'Putthirankottai, Chengalpattu',
+        description:
+            'Premium residential plots in the heart of Putthirankottai. Meticulously planned, surrounded by nature and built for families who want to plant roots in a community that feels like home.',
+        image: layoutMap,
+        available: 25,
+        sold: 22,
+        total: 47,
+        status: 'Active',
+    },
+    {
+        id: 'golden-city',
+        label: 'Featured Project',
+        name: 'Golden City',
+        location: 'Kariyamanikkam, Trichy',
+        description:
+            'Thoughtfully designed plots in the fast-growing corridor of Kariyamanikkam. Golden City brings together connectivity, space and long-term value in one of Trichy\'s most promising neighbourhoods.',
+        image: '/Golden City.png',
+        available: 18,
+        sold: 30,
+        total: 48,
+        status: 'Selling Fast',
+    },
+];
+
+const StatBar = ({ available, sold, total }) => {
+    const soldPct = Math.round((sold / total) * 100);
+    return (
+        <div style={{ width: '100%' }}>
+            <div style={{
+                display: 'flex',
+                justifyContent: 'space-between',
+                fontSize: '10px',
+                fontWeight: 700,
+                letterSpacing: '0.1em',
+                textTransform: 'uppercase',
+                color: 'rgba(255,255,255,0.35)',
+                marginBottom: 8,
+            }}>
+                <span>Availability</span>
+                <span>{soldPct}% sold</span>
+            </div>
+            <div style={{
+                height: 6,
+                borderRadius: 999,
+                background: 'rgba(255,255,255,0.08)',
+                overflow: 'hidden',
+            }}>
+                <div style={{
+                    height: '100%',
+                    width: `${soldPct}%`,
+                    borderRadius: 999,
+                    background: `linear-gradient(90deg, ${NEON}, #34d399)`,
+                    transition: 'width 1s ease',
+                }} />
+            </div>
+        </div>
+    );
+};
+
+const ProjectCard = ({ project }) => {
+    const [hovered, setHovered] = useState(false);
+
+    return (
+        <article
+            onMouseEnter={() => setHovered(true)}
+            onMouseLeave={() => setHovered(false)}
+            style={{
+                background: BLACK,
+                border: `1px solid ${hovered ? 'rgba(110,231,183,0.3)' : BORDER}`,
+                borderRadius: 20,
+                overflow: 'hidden',
+                transition: 'transform 0.4s cubic-bezier(.22,1,.36,1), box-shadow 0.4s ease, border-color 0.4s ease',
+                transform: hovered ? 'translateY(-8px)' : 'translateY(0)',
+                boxShadow: hovered
+                    ? `0 32px 64px rgba(0,0,0,0.6), 0 0 40px rgba(110,231,183,0.07)`
+                    : '0 8px 32px rgba(0,0,0,0.4)',
+                display: 'flex',
+                flexDirection: 'column',
+            }}
+        >
+            {/* Image */}
+            <div style={{
+                position: 'relative',
+                width: '100%',
+                aspectRatio: '16 / 10',
+                overflow: 'hidden',
+                background: '#111',
+            }}>
+                <img
+                    src={project.image}
+                    alt={`${project.name} layout`}
+                    style={{
+                        width: '100%',
+                        height: '100%',
+                        objectFit: 'cover',
+                        display: 'block',
+                        transition: 'transform 0.6s ease, filter 0.5s ease',
+                        transform: hovered ? 'scale(1.06)' : 'scale(1)',
+                        filter: hovered ? 'grayscale(0%) brightness(1)' : 'grayscale(20%) brightness(0.9)',
+                    }}
+                />
+                {/* Gradient overlay */}
+                <div style={{
+                    position: 'absolute',
+                    inset: 0,
+                    background: 'linear-gradient(to top, rgba(10,10,10,0.7) 0%, transparent 60%)',
+                }} />
+
+                {/* Top badges row */}
+                <div style={{
+                    position: 'absolute',
+                    top: 14,
+                    left: 14,
+                    right: 14,
+                    display: 'flex',
+                    justifyContent: 'space-between',
+                    alignItems: 'center',
+                }}>
+                    <span style={{
+                        fontSize: '10px',
+                        fontWeight: 700,
+                        letterSpacing: '0.14em',
+                        textTransform: 'uppercase',
+                        color: BLACK,
+                        background: NEON,
+                        padding: '4px 12px',
+                        borderRadius: 999,
+                    }}>
+                        {project.label}
+                    </span>
+                    <span style={{
+                        fontSize: '10px',
+                        fontWeight: 700,
+                        letterSpacing: '0.1em',
+                        textTransform: 'uppercase',
+                        color: NEON,
+                        background: 'rgba(0,0,0,0.6)',
+                        backdropFilter: 'blur(8px)',
+                        padding: '4px 12px',
+                        borderRadius: 999,
+                        border: `1px solid ${BORDER}`,
+                    }}>
+                        {project.status}
+                    </span>
+                </div>
+
+                {/* Location chip at bottom of image */}
+                <div style={{
+                    position: 'absolute',
+                    bottom: 14,
+                    left: 14,
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: 6,
+                }}>
+                    <span style={{ fontSize: 12, color: NEON }}>📍</span>
+                    <span style={{
+                        fontSize: '11px',
+                        color: 'rgba(255,255,255,0.8)',
+                        fontWeight: 600,
+                        letterSpacing: '0.04em',
+                    }}>
+                        {project.location}
+                    </span>
+                </div>
+            </div>
+
+            {/* Card body */}
+            <div style={{ padding: '24px 24px 28px', display: 'flex', flexDirection: 'column', gap: 20, flex: 1 }}>
+
+                {/* Project name */}
+                <div>
+                    <h3 style={{
+                        fontFamily: 'Oswald, sans-serif',
+                        fontSize: 'clamp(1.6rem, 2.5vw, 2.2rem)',
+                        fontWeight: 700,
+                        color: '#fff',
+                        letterSpacing: '-0.01em',
+                        margin: '0 0 8px',
+                        lineHeight: 1.1,
+                        textTransform: 'uppercase',
+                    }}>
+                        {project.name}
+                    </h3>
+                    <p style={{
+                        fontSize: '13.5px',
+                        color: 'rgba(255,255,255,0.45)',
+                        lineHeight: 1.7,
+                        margin: 0,
+                    }}>
+                        {project.description}
+                    </p>
+                </div>
+
+                {/* Divider */}
+                <div style={{
+                    height: 1,
+                    background: hovered
+                        ? `linear-gradient(90deg, ${NEON}, transparent)`
+                        : 'rgba(255,255,255,0.05)',
+                    transition: 'background 0.4s ease',
+                }} />
+
+                {/* Stats row */}
+                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12 }}>
+                    {/* Available */}
+                    <div style={{
+                        background: 'rgba(110,231,183,0.06)',
+                        border: `1px solid rgba(110,231,183,0.15)`,
+                        borderRadius: 12,
+                        padding: '14px 16px',
+                    }}>
+                        <p style={{
+                            margin: '0 0 4px',
+                            fontSize: '10px',
+                            fontWeight: 700,
+                            letterSpacing: '0.12em',
+                            textTransform: 'uppercase',
+                            color: NEON,
+                        }}>
+                            Available
+                        </p>
+                        <div style={{ display: 'flex', alignItems: 'baseline', gap: 6 }}>
+                            <span style={{
+                                fontFamily: 'Oswald, sans-serif',
+                                fontSize: '2.4rem',
+                                fontWeight: 700,
+                                color: '#fff',
+                                lineHeight: 1,
+                            }}>
+                                {project.available}
+                            </span>
+                            <span style={{
+                                fontSize: '11px',
+                                color: NEON,
+                                fontWeight: 700,
+                                letterSpacing: '0.06em',
+                            }}>
+                                Plots
+                            </span>
+                        </div>
+                        <p style={{ margin: '4px 0 0', fontSize: '11px', color: 'rgba(255,255,255,0.3)' }}>
+                            Ready to book
+                        </p>
+                    </div>
+
+                    {/* Sold */}
+                    <div style={{
+                        background: 'rgba(255,255,255,0.03)',
+                        border: '1px solid rgba(255,255,255,0.06)',
+                        borderRadius: 12,
+                        padding: '14px 16px',
+                    }}>
+                        <p style={{
+                            margin: '0 0 4px',
+                            fontSize: '10px',
+                            fontWeight: 700,
+                            letterSpacing: '0.12em',
+                            textTransform: 'uppercase',
+                            color: 'rgba(255,255,255,0.35)',
+                        }}>
+                            Sold
+                        </p>
+                        <div style={{ display: 'flex', alignItems: 'baseline', gap: 6 }}>
+                            <span style={{
+                                fontFamily: 'Oswald, sans-serif',
+                                fontSize: '2.4rem',
+                                fontWeight: 700,
+                                color: 'rgba(255,255,255,0.6)',
+                                lineHeight: 1,
+                            }}>
+                                {project.sold}
+                            </span>
+                            <span style={{
+                                fontSize: '11px',
+                                color: 'rgba(255,100,100,0.8)',
+                                fontWeight: 700,
+                                letterSpacing: '0.06em',
+                            }}>
+                                Plots
+                            </span>
+                        </div>
+                        <p style={{ margin: '4px 0 0', fontSize: '11px', color: 'rgba(255,255,255,0.3)' }}>
+                            Happily owned
+                        </p>
+                    </div>
+                </div>
+
+                {/* Progress bar */}
+                <StatBar available={project.available} sold={project.sold} total={project.total} />
+
+                {/* Enquire CTA */}
+                <button
+                    style={{
+                        marginTop: 4,
+                        width: '100%',
+                        padding: '13px 24px',
+                        borderRadius: 10,
+                        border: `1px solid ${hovered ? NEON : 'rgba(110,231,183,0.25)'}`,
+                        background: hovered ? NEON : 'transparent',
+                        color: hovered ? BLACK : NEON,
+                        fontFamily: 'Oswald, sans-serif',
+                        fontSize: '13px',
+                        fontWeight: 700,
+                        letterSpacing: '0.12em',
+                        textTransform: 'uppercase',
+                        cursor: 'pointer',
+                        transition: 'all 0.3s ease',
+                    }}
+                >
+                    Enquire Now
+                </button>
+            </div>
+        </article>
+    );
+};
 
 const CurrentProject = () => {
     return (
-        <section className="py-24 bg-hero-bg">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section style={{
+            padding: '96px 0',
+            background: `linear-gradient(180deg, ${BG} 0%, rgba(10,10,10,0.95) 100%)`,
+            borderBottom: `1px solid ${BORDER}`,
+        }}>
+            <div style={{ maxWidth: 1200, margin: '0 auto', padding: '0 24px' }}>
 
-                {/* Header Section */}
-                <div className="mb-16">
-                    <h2 className="text-sm font-bold tracking-widest text-hero-neon uppercase mb-2">
-                        CURRENT PROJECT
+                {/* Section header */}
+                <div style={{ marginBottom: 56 }}>
+                    <span style={{
+                        display: 'inline-flex',
+                        alignItems: 'center',
+                        gap: 8,
+                        fontSize: '11px',
+                        fontWeight: 700,
+                        letterSpacing: '0.22em',
+                        textTransform: 'uppercase',
+                        color: NEON,
+                        marginBottom: 14,
+                    }}>
+                        <span style={{ width: 24, height: 1, background: NEON, display: 'inline-block' }} />
+                        Current Projects
+                    </span>
+                    <h2 style={{
+                        fontFamily: 'Oswald, sans-serif',
+                        fontSize: 'clamp(2rem, 4vw, 3.2rem)',
+                        fontWeight: 700,
+                        color: '#fff',
+                        letterSpacing: '-0.01em',
+                        margin: '0 0 12px',
+                        lineHeight: 1.1,
+                        textTransform: 'uppercase',
+                    }}>
+                        WHERE WE ARE{' '}
+                        <span style={{ color: NEON, textShadow: '0 0 30px rgba(110,231,183,0.35)' }}>
+                            BUILDING
+                        </span>
                     </h2>
-                    <h3 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white uppercase leading-[0.9]">
-                        GLOBAL CITY
-                    </h3>
+                    <p style={{
+                        fontSize: '15px',
+                        color: 'rgba(255,255,255,0.38)',
+                        maxWidth: 500,
+                        lineHeight: 1.75,
+                        margin: 0,
+                    }}>
+                        Two communities taking shape right now. Real plots, real ownership and a real future for your family.
+                    </p>
                 </div>
 
-                {/* 2-Column Grid */}
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-
-                    {/* Left Column: Layout Image */}
-                    <div className="bg-white rounded-xl overflow-hidden border border-gray-100 shadow-xl group">
-                        <div className="aspect-[4/3] relative">
-                            {/* Global City layout map */}
-                            <img
-                                src={layoutMap}
-                                alt="Global City Layout Map"
-                                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                            />
-                            {/* Small badge overlay */}
-                            <div className="absolute top-4 left-4 bg-hero-neon text-black text-xs font-bold uppercase py-1 px-3 rounded-full shadow-md">
-                                Putthirankottai
-                            </div>
-                        </div>
-                    </div>
-
-                    {/* Right Column: Info & Cards */}
-                    <div className="flex flex-col h-full justify-center space-y-8">
-
-                        <div>
-                            <p className="text-gray-200 text-lg leading-relaxed font-sans">
-                                Discover premium residential plots in the heart of Putthirankottai, Chengalpattu. Global City offers a meticulously planned layout surrounded by nature, perfect for building your dream home or for a secure investment.
-                            </p>
-                        </div>
-
-                        {/* Stats Cards */}
-                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-
-                            {/* Available Plots Card */}
-                            <div className="bg-white rounded-xl p-6 border-l-4 border-green-500 shadow-md hover:shadow-lg transition-shadow">
-                                <h4 className="text-gray-700 text-sm font-bold uppercase tracking-wider mb-2">Available Plots</h4>
-                                <div className="flex items-baseline gap-2">
-                                    <span className="text-5xl font-display font-bold text-hero-black">25</span>
-                                    <span className="text-green-600 text-sm font-bold">Plots</span>
-                                </div>
-                                <p className="text-gray-600 text-xs mt-2">Ready to construct</p>
-                            </div>
-
-                            {/* Sold Plots Card */}
-                            <div className="bg-gray-50 rounded-xl p-6 border-l-4 border-red-400 shadow-sm opacity-90">
-                                <h4 className="text-gray-700 text-sm font-bold uppercase tracking-wider mb-2">Sold Plots</h4>
-                                <div className="flex items-baseline gap-2">
-                                    <span className="text-4xl font-display font-bold text-gray-600">22</span>
-                                    <span className="text-red-500 text-sm font-bold">Plots</span>
-                                </div>
-                                <p className="text-gray-600 text-xs mt-2">Happily owned</p>
-                            </div>
-
-                        </div>
-
-                        {/* CTA Button */}
-                        <div className="pt-4">
-                            <button className="bg-hero-neon text-hero-black font-display font-bold w-full sm:w-auto px-8 py-4 rounded-lg uppercase tracking-wider hover:bg-black hover:text-hero-neon transition-colors duration-300">
-                                Download Brochure
-                            </button>
-                        </div>
-
-                    </div>
+                {/* Two project cards */}
+                <div style={{
+                    display: 'grid',
+                    gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+                    gap: 28,
+                    alignItems: 'start',
+                }}>
+                    {projects.map(project => (
+                        <ProjectCard key={project.id} project={project} />
+                    ))}
                 </div>
+
+                {/* Bottom neon accent */}
+                <div style={{
+                    marginTop: 64,
+                    height: 1,
+                    background: `linear-gradient(90deg, transparent, ${NEON}, transparent)`,
+                    opacity: 0.25,
+                }} />
             </div>
         </section>
     );
