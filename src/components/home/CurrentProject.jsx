@@ -15,10 +15,10 @@ const projects = [
         description:
             'Premium residential plots in the heart of Putthirankottai, Chengalpattu. A meticulously planned layout with strong investment potential. We handle the full marketing and sales cycle so these plots reach the right buyers at the right time.',
         image: layoutMap,
-        available: 25,
-        sold: 22,
+        available: 31,
+        sold: 16,
         total: 47,
-        status: 'Active',
+        status: 'Selling Fast',
     },
     {
         id: 'golden-city',
@@ -28,10 +28,10 @@ const projects = [
         description:
             'Strategically located plots in Kariyamanikkam, one of Trichy\'s fastest moving corridors. Our team manages the entire sales pipeline for Golden City, bringing serious buyers to the table and closing deals efficiently.',
         image: '/Golden City.png',
-        available: 18,
-        sold: 30,
-        total: 48,
-        status: 'Selling Fast',
+        available: 63,
+        sold: 8,
+        total: 71,
+        status: 'Newly Launched',
     },
 ];
 
