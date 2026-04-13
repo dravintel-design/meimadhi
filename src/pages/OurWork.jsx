@@ -192,7 +192,7 @@ const MiniHero = () => {
                                 fontWeight: 700,
                                 color: '#fff',
                                 lineHeight: 1,
-                            }}>74+</div>
+                            }}>533</div>
                             <p style={{
                                 margin: '6px 0 0',
                                 fontSize: '12px',
@@ -209,7 +209,7 @@ const MiniHero = () => {
                                 fontWeight: 700,
                                 color: '#fff',
                                 lineHeight: 1,
-                            }}>3</div>
+                            }}>7</div>
                             <p style={{
                                 margin: '6px 0 0',
                                 fontSize: '12px',
