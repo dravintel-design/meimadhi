@@ -2,6 +2,7 @@ import React from 'react';
 import CurrentProject from '../components/home/CurrentProject';
 import Portfolio from '../components/home/Portfolio';
 import Testimonials from '../components/home/Testimonials';
+import QuoteBanner from '../components/home/QuoteBanner';
 import { Link } from 'react-router-dom';
 import { MessageCircle } from 'lucide-react';
 import heroCity from '../assets/hero-city.png';
@@ -67,6 +68,7 @@ const Home = () => {
             <CurrentProject />
             <Portfolio />
             <Testimonials />
+            <QuoteBanner />
         </div>
     );
 };
