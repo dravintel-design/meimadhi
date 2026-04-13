@@ -100,21 +100,6 @@ const MiniHero = () => {
 
             <div style={{ maxWidth: 1200, margin: '0 auto' }}>
 
-                {/* Eyebrow */}
-                <span style={{
-                    display: 'inline-flex',
-                    alignItems: 'center',
-                    gap: 8,
-                    fontSize: '11px',
-                    fontWeight: 700,
-                    letterSpacing: '0.22em',
-                    textTransform: 'uppercase',
-                    color: NEON,
-                    marginBottom: 20,
-                }}>
-                    <span style={{ width: 24, height: 1, background: NEON, display: 'inline-block' }} />
-                    Our Portfolio
-                </span>
 
                 {/* Headline */}
                 <h1 style={{
