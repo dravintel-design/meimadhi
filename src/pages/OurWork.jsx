@@ -6,8 +6,8 @@ const OurWork = () => {
     return (
         <div className="bg-hero-black min-h-screen">
             <PageHeader
-                title={<>OUR <span className="text-hero-neon">WORK</span></>}
-                subtitle="A showcase of our best real estate projects and digital transformations."
+                title={<>PROJECTS</>}
+                subtitle="A showcase of the real estate projects we have marketed and sold."
             />
 
             <PortfolioGrid />

@@ -26,7 +26,7 @@ const Navbar = () => {
                             </div>
                             <div className="relative group">
                                 <Link to="/our-work" className="text-white hover:text-hero-neon px-2 py-2 text-sm font-medium transition-colors flex items-center">
-                                    Our Work
+                                    Projects
                                 </Link>
                             </div>
                             <div className="relative group">
@@ -71,7 +71,7 @@ const Navbar = () => {
                 <div className="lg:hidden bg-hero-bg border-b border-white/10">
                     <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                         <Link to="/services" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Services</Link>
-                        <Link to="/our-work" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Our Work</Link>
+                        <Link to="/our-work" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Projects</Link>
                         <Link to="/about" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">About</Link>
                         <Link to="/contact" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Contact</Link>
                         <Link to="/book-call" className="text-hero-neon hover:text-white block px-3 py-2 rounded-md text-base font-medium">Book a Call</Link>
