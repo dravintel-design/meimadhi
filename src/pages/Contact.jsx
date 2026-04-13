@@ -32,21 +32,21 @@ const Contact = () => {
                                 <Mail className="w-6 h-6 text-hero-neon mt-1 mr-4" />
                                 <div>
                                     <h4 className="text-white font-bold uppercase tracking-wider">Email</h4>
-                                    <p className="text-gray-400">info@meimathi.co</p>
+                                    <p className="text-gray-400">meimathi.sales@gmail.com</p>
                                 </div>
                             </div>
                             <div className="flex items-start">
                                 <Phone className="w-6 h-6 text-hero-neon mt-1 mr-4" />
                                 <div>
                                     <h4 className="text-white font-bold uppercase tracking-wider">Phone</h4>
-                                    <p className="text-gray-400">07457 414 356</p>
+                                    <p className="text-gray-400">786 786 8992</p>
                                 </div>
                             </div>
                             <div className="flex items-start">
                                 <MapPin className="w-6 h-6 text-hero-neon mt-1 mr-4" />
                                 <div>
                                     <h4 className="text-white font-bold uppercase tracking-wider">Location</h4>
-                                    <p className="text-gray-400">Chennai, Tamilnadu</p>
+                                    <p className="text-gray-400">Villupuram, Tamil Nadu</p>
                                 </div>
                             </div>
                         </div>
