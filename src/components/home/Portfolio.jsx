@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const projects = [
     {
@@ -33,12 +34,15 @@ const Portfolio = () => {
                             SELECTED <span className="text-hero-neon">WORK</span>
                         </h2>
                         <p className="text-gray-400 max-w-xl">
-                            Check out some of our recent projects. We take pride in delivering quality across every pixel.
+                            A look at some of the projects we have marketed and sold. Results speak louder than promises.
                         </p>
                     </div>
-                    <button className="hidden md:inline-flex items-center justify-center border border-white text-white px-8 py-3 font-display font-bold uppercase tracking-wide hover:bg-white hover:text-black transition-colors">
+                    <Link
+                        to="/our-work"
+                        className="hidden md:inline-flex items-center justify-center border border-white text-white px-8 py-3 font-display font-bold uppercase tracking-wide hover:bg-white hover:text-black transition-colors"
+                    >
                         View All Projects
-                    </button>
+                    </Link>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -59,10 +63,13 @@ const Portfolio = () => {
                     ))}
                 </div>
 
-                <div className="mt-12 text-center md:hidden">
-                    <button className="inline-flex items-center justify-center border border-white text-white px-8 py-3 font-display font-bold uppercase tracking-wide hover:bg-white hover:text-black transition-colors">
+                <div className="mt-12 md:hidden">
+                    <Link
+                        to="/our-work"
+                        className="inline-flex items-center justify-center border border-white text-white px-8 py-3 font-display font-bold uppercase tracking-wide hover:bg-white hover:text-black transition-colors"
+                    >
                         View All Projects
-                    </button>
+                    </Link>
                 </div>
             </div>
         </section>

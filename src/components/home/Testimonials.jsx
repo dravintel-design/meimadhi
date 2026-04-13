@@ -275,7 +275,7 @@ const Testimonials = () => {
             <div style={{ maxWidth: 1200, margin: '0 auto', padding: '0 24px' }}>
 
                 {/* Section header */}
-                <div style={{ textAlign: 'center', marginBottom: 64 }}>
+                <div style={{ textAlign: 'left', marginBottom: 64 }}>
                     <h2 style={{
                         fontFamily: 'Oswald, sans-serif',
                         fontSize: 'clamp(2rem, 4.5vw, 3.5rem)',
@@ -298,7 +298,7 @@ const Testimonials = () => {
                         color: 'rgba(255,255,255,0.38)',
                         fontSize: '15px',
                         maxWidth: 440,
-                        margin: '0 auto',
+                        margin: 0,
                         lineHeight: 1.75,
                     }}>
                         Hover over each video to see them come alive. These are real clients sharing their real experience.

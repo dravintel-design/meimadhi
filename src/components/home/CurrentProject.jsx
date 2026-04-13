@@ -302,27 +302,7 @@ const ProjectCard = ({ project }) => {
                 {/* Progress bar */}
                 <StatBar available={project.available} sold={project.sold} total={project.total} />
 
-                {/* Enquire CTA */}
-                <button
-                    style={{
-                        marginTop: 4,
-                        width: '100%',
-                        padding: '13px 24px',
-                        borderRadius: 10,
-                        border: `1px solid ${hovered ? NEON : 'rgba(110,231,183,0.25)'}`,
-                        background: hovered ? NEON : 'transparent',
-                        color: hovered ? BLACK : NEON,
-                        fontFamily: 'Oswald, sans-serif',
-                        fontSize: '13px',
-                        fontWeight: 700,
-                        letterSpacing: '0.12em',
-                        textTransform: 'uppercase',
-                        cursor: 'pointer',
-                        transition: 'all 0.3s ease',
-                    }}
-                >
-                    Enquire Now
-                </button>
+
             </div>
         </article>
     );
