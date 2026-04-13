@@ -343,9 +343,9 @@ const CurrentProject = () => {
                         lineHeight: 1.1,
                         textTransform: 'uppercase',
                     }}>
-                        PROJECTS WE ARE{' '}
+                        CURRENT{' '}
                         <span style={{ color: NEON, textShadow: '0 0 30px rgba(110,231,183,0.35)' }}>
-                            SELLING NOW
+                            PROJECTS
                         </span>
                     </h2>
                     <p style={{
