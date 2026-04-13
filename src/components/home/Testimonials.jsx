@@ -317,13 +317,6 @@ const Testimonials = () => {
                     ))}
                 </div>
 
-                {/* ── Bottom accent line ── */}
-                <div style={{
-                    marginTop: 64,
-                    height: 1,
-                    background: `linear-gradient(90deg, transparent, ${NEON}, transparent)`,
-                    opacity: 0.3,
-                }} />
             </div>
         </section>
     );
