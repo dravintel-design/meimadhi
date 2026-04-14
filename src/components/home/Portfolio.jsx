@@ -5,7 +5,7 @@ const projects = [
     {
         title: "Mahalakshmi Nagar",
         category: "Perambalur, Trichy",
-        image: "/mahalakshmi nagar.jpg",
+        image: "/mahalakshmi nagar.png",
     },
     {
         title: "SMV Residential Plot",

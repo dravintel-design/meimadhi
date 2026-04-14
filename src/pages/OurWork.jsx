@@ -13,7 +13,7 @@ const categories = [
         projects: [
             { title: 'Global City',          location: 'Putthirankottai, Chengalpattu', image: '/layout-map.png',            tag: 'Selling Fast'   },
             { title: 'Golden City',          location: 'Kariyamanikkam, Trichy',        image: '/Golden City.png',           tag: 'Newly Launched' },
-            { title: 'Mahalakshmi Nagar',    location: 'Perambalur, Trichy',            image: '/mahalakshmi nagar.jpg',      tag: 'Active'         },
+            { title: 'Mahalakshmi Nagar',    location: 'Perambalur, Trichy',            image: '/mahalakshmi nagar.png',      tag: 'Active'         },
         ],
     },
     {
