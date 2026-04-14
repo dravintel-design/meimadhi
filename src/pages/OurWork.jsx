@@ -43,7 +43,7 @@ const categories = [
 
 /* ─── Tag colours ─────────────────────────────────────────────────────── */
 const tagStyle = (tag) => {
-    if (tag === 'Active')         return { bg: 'rgba(110,231,183,0.15)',  color: NEON };
+    if (tag === 'Active')         return { bg: '#0f2820',                color: NEON };
     if (tag === 'Selling Fast')   return { bg: NEON,                       color: BLACK };
     if (tag === 'Newly Launched') return { bg: '#3b82f6',                  color: '#fff' };
     if (tag === 'Sold Out')       return { bg: 'rgba(255,255,255,0.08)',    color: 'rgba(255,255,255,0.45)' };
