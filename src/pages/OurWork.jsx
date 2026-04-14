@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
+import layoutMap from '../assets/layout-map.png';
 
 const NEON  = '#6EE7B7';
 const BLACK = '#0a0a0a';
@@ -11,7 +12,7 @@ const categories = [
         label: 'Current Projects',
         description: 'Properties we are actively marketing and selling right now.',
         projects: [
-            { title: 'Global City',          location: 'Putthirankottai, Chengalpattu', image: '/layout-map.png',            tag: 'Selling Fast'   },
+            { title: 'Global City',          location: 'Putthirankottai, Chengalpattu', image: layoutMap,                    tag: 'Selling Fast'   },
             { title: 'Golden City',          location: 'Kariyamanikkam, Trichy',        image: '/Golden City.png',           tag: 'Newly Launched' },
             { title: 'Mahalakshmi Nagar',    location: 'Perambalur, Trichy',            image: '/mahalakshmi nagar.png',      tag: 'Active'         },
         ],
