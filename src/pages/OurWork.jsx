@@ -21,9 +21,9 @@ const categories = [
         label: 'Completed Projects',
         description: 'Projects we have successfully marketed and delivered for our clients.',
         projects: [
-            { title: 'Sri Thanvanthiri Swamy Nagar', location: 'Panruti',          image: null,                          tag: 'Sold Out' },
-            { title: 'Udhayam Farm Land',             location: 'Poothurai',        image: null,                          tag: 'Sold Out' },
-            { title: 'Om Ganapathy Nagar',            location: 'Sulur',            image: null,                          tag: 'Sold Out' },
+            { title: 'Sri Thanvanthiri Swamy Nagar', location: 'Panruti',          image: '/Sri Thanvanthri Swamy Nagar.png', tag: 'Sold Out' },
+            { title: 'Udhayam Farm Land',             location: 'Poothurai',        image: '/Udhayam Farm Land.png',           tag: 'Sold Out' },
+            { title: 'Om Ganapathy Nagar',            location: 'Sulur',            image: '/Om Ganapathy Nagar.png',          tag: 'Sold Out' },
             { title: 'JK Industrial',                 location: 'Navamalkapper',    image: '/JK Industrial Land.jpeg',   tag: 'Closed'   },
             { title: 'Tamilvel Nagar',                location: 'Siruvadi',         image: null,                          tag: 'Sold Out' },
             { title: 'Selvavel Nagar',                location: 'Siruvadi',         image: null,                          tag: 'Sold Out' },
