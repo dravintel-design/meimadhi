@@ -29,7 +29,7 @@ const categories = [
             { title: 'Tamilvel Nagar',                location: 'Siruvadi',         image: '/Tamilvel nagar.png',          tag: 'Sold Out' },
             { title: 'Selvavel Nagar',                location: 'Siruvadi',         image: '/Selvavel nagar.png',          tag: 'Sold Out' },
             { title: 'JKR City',                      location: 'V Agaram',         image: '/JKR City.png',               tag: 'Sold Out' },
-            { title: 'Sundaramurthi Vinayagar Nagar', location: 'Perangiyur',       image: null,                          tag: 'Sold Out' },
+            { title: 'SMV Nagar',                     location: 'Perangiyur',       image: '/SMV Nagar.png',              tag: 'Sold Out' },
             { title: 'JL Industry',                   location: 'Navamalkapper',    image: null,                          tag: 'Closed'   },
         ],
     },
