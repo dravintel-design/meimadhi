@@ -1,6 +1,5 @@
 import React from 'react';
 import CurrentProject from '../components/home/CurrentProject';
-import Portfolio from '../components/home/Portfolio';
 import Testimonials from '../components/home/Testimonials';
 import QuoteBanner from '../components/home/QuoteBanner';
 import { Link } from 'react-router-dom';
@@ -61,7 +60,6 @@ const Home = () => {
             </section>
 
             <CurrentProject />
-            <Portfolio />
             <Testimonials />
             <QuoteBanner />
         </div>
